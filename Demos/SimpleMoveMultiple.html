@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        .box1 {
+            width: 10em;
+            height: 10em;
+            position: absolute;
+            background-color: yellow;
+            border: 1px solid black;
+            top: 10px;
+        }
+
+        .box2 {
+            width: 10em;
+            height: 10em;
+            position: absolute;
+            background-color: yellow;
+            border: 1px solid black;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box1"></div>
+    <div id="box2" class="box2"></div>
+
+    <script src="../Js/JsUtility.js"></script>
+    <script type="text/javascript">
+        //多变量匀加速运动
+        var param1 = {
+            Id: 'box1',
+            From: 0,
+            To: 1000,
+            LastTime: 5000,
+            Type: 'top'
+        };
+        var param2 = {
+            Id: 'box1',
+            From: 100,
+            To: 500,
+            LastTime: 5000,
+            Type: 'width'
+        };
+        var param3 = {
+            Id: 'box2',
+            From: 100,
+            To: 500,
+            LastTime: 5000,
+            Type: 'bottom'
+        };
+        var arrParam = [];
+        arrParam.push(param1);
+        arrParam.push(param2);
+        arrParam.push(param3);
+
+        MoveUtility.SimpleMoveMultiple(arrParam);
+    </script>
+</body>
+</html>

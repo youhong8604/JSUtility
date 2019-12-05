@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SimpleMove</title>
+    <style type="text/css">
+        * {
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box1 {
+            width: 10em;
+            height: 10em;
+            position: absolute;
+            background-color: yellow;
+            border: 1px solid black;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box1"></div>
+
+    <script src="../Js/JsUtility.js"></script>
+    <script type="text/javascript">
+        //单一变量简单匀速运动
+        var param = {
+            Id: 'box1',
+            From: 100,
+            To: 1000,
+            LastTime: 5000,
+            Type: 'top'
+        };
+        MoveUtility.SimpleMove(param);
+    </script>
+</body>
+</html>
